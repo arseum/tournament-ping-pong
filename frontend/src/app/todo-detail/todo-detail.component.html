@@ -1,0 +1,14 @@
+<H1>Todo #{{id}}</H1>
+
+<div *ngIf="item" class="container">
+  <div class="row">
+    <label class="col-md-3">Id</label>
+    <label class="col-md-3">{{item.id}}</label>
+  </div>
+
+  <div class="row">
+    <label class="col-md-3">Description</label>
+    <label class="col-md-3">{{item.description}}</label>
+  </div>
+
+</div>

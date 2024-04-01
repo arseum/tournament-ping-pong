@@ -1,0 +1,14 @@
+<H1>List of TODOs</H1>
+
+<ul>
+  <li *ngFor="let i of todoService.items">
+    {{i.id}} {{i.description}}
+    <button class="btn btn-outline-info btn-sm"
+      (click)="onDelete(i.id)"
+      >Delete</button>
+
+    <button class="btn btn-outline-info btn-sm"
+            routerLink="/todo-detail/{{i.id}}"
+      >Detail</button>
+  </li>
+</ul>

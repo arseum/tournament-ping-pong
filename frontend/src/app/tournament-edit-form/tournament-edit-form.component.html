@@ -1,0 +1,19 @@
+<H1>New Tournament</H1>
+
+<div class="container">
+  <div class="row">
+    <label class="col-2">Name</label>
+    <input class="col-10"
+      [(ngModel)]="tournamentName"
+      >
+  </div>
+  <div class="row">
+    <button class="col-md-2 btn btn-outline-info"
+            (click)="onSubmit()">Submit</button>
+  </div>
+
+  <div *ngIf="errorOccured" class="row">
+    Error Occurred, please retry {{errorOccured}}
+  </div>
+
+</div>

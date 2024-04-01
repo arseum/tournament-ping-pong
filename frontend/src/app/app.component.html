@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+
+    <ul ngbNav class="navbar-nav mr-auto">
+      <li ngbNavItem routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a ngbNavLink routerLink="/">Home</a>
+      </li>
+
+      <li ngbNavItem routerLinkActive="active">
+        <a ngbNavLink routerLink="/tournaments">List</a>
+      </li>
+
+      <li ngbNavItem routerLinkActive="active">
+        <a ngbNavLink routerLink="/tournaments/new">New</a>
+      </li>
+
+      <!--
+      <li ngbNavItem routerLinkActive="active">
+        <a ngbNavLink routerLink="/tournament-create">New Tournament</a>
+      </li>
+      -->
+
+    </ul>
+</nav>
+
+<router-outlet />

@@ -1,0 +1,8 @@
+<H1>Tournament {{(data)? data.name : ''}}</H1>
+
+<div *ngIf="errorOccured">
+    ERROR: {{errorOccured}}
+</div>
+<div *ngIf="data">
+    name: {{data.name}}
+</div>
