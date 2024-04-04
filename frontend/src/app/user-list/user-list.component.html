@@ -1,0 +1,16 @@
+<H1>Tournaments</H1>
+
+<button class="btn btn-outline-info btn-sm"
+        [disabled]="loading"
+        (click)="onClickRefresh()">Refresh</button>
+<div *ngIf="loadingMsg">{{loadingMsg}}</div>
+
+<div class="container-fluid">
+  <!-- @for (tournament of tournaments; track tournaments.id) { .. } -->
+  <div class="row" *ngFor="let tournament of users">
+    <a class="col-md-2" routerLink="/tournaments/{{tournament.id}}">Detail</a>
+    <a class="col-md-2" routerLink="/tournaments/{{tournament.id}}">Supprimer</a>
+    <label class="col-md-5">{{tournament.name}}</label>
+    <label class="col-md-2">{{tournament.state}}</label>
+  </div>
+</div>

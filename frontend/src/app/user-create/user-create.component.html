@@ -1,0 +1,47 @@
+<H1>New User</H1>
+
+<div class="container">
+  <div class="row mb-4">
+    <label class="col-2">First name</label>
+    <input class="col-10"
+           [(ngModel)]="tempUser.firstName"
+    >
+  </div>
+  <div class="row mb-4">
+    <label class="col-2">Last name</label>
+    <input class="col-10"
+           [(ngModel)]="tempUser.lastName"
+    >
+  </div>
+  <div class="row mb-4">
+    <label class="col-2">Birthdate</label>
+    <input class="col-10"
+           [(ngModel)]="tempUser.birthdate"
+           type="date"
+    >
+  </div>
+  <div class="row mb-4">
+    <label class="col-2">Email</label>
+    <input class="col-10"
+           [(ngModel)]="tempUser.email"
+           type="email"
+    >
+  </div>
+  <div class="row mb-4">
+    <label class="col-2">Password</label>
+    <input class="col-10"
+           [(ngModel)]="tempUser.password"
+           type="password"
+    >
+  </div>
+  <div class="row mb-4">
+    <button class="col-md-2 btn btn-outline-info"
+            (click)="onSubmit()">Submit
+    </button>
+  </div>
+
+  <div *ngIf="errorOccurred" class="row mb-3">
+    Error Occurred, please retry {{ errorOccurred }}
+  </div>
+
+</div>

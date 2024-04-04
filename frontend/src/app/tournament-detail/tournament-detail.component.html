@@ -1,7 +1,19 @@
 <H1>Tournament {{(data)? data.name : ''}}</H1>
 
-<div *ngIf="errorOccured">
-    ERROR: {{errorOccured}}
+<div class="container">
+  <div class="row mb-4">
+    <h2>Add participants</h2>
+    <label class="col-2">id participant :</label>
+    <input class="col-7"
+           [(ngModel)]="idUserAdd"
+    >
+    <button class="col-1 btn btn-outline-info"
+            (click)="onAddUser()">Addd
+  </button>
+  </div>
+</div>
+<div *ngIf="errorOccurred">
+    ERROR: {{errorOccurred}}
 </div>
 <div *ngIf="data">
     name: {{data.name}}

@@ -1,25 +1,30 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
 
-    <ul ngbNav class="navbar-nav mr-auto">
-      <li ngbNavItem routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a ngbNavLink routerLink="/">Home</a>
-      </li>
+  <ul ngbNav class="navbar-nav mr-auto">
+    <li ngbNavItem routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a ngbNavLink routerLink="/">Home</a>
+    </li>
 
-      <li ngbNavItem routerLinkActive="active">
-        <a ngbNavLink routerLink="/tournaments">List</a>
-      </li>
+    <li ngbNavItem ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbar-menu1" class="nav-link dropdown-toggle" role="button">
+        Tournament
+      </a>
+      <div ngbDropdownMenu aria-labelledby="navbar-menu1" class="dropdown-menu">
+        <a ngbNavLink class="dropdown-item" routerLink="/tournaments">List</a>
+        <a ngbNavLink class="dropdown-item" routerLink="/tournaments/new">New</a>
+      </div>
+    </li>
 
-      <li ngbNavItem routerLinkActive="active">
-        <a ngbNavLink routerLink="/tournaments/new">New</a>
-      </li>
+    <li ngbNavItem ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbar-menu2" class="nav-link dropdown-toggle" role="button">
+        User
+      </a>
+      <div ngbDropdownMenu aria-labelledby="navbar-menu2" class="dropdown-menu">
+        <a ngbNavLink class="dropdown-item" routerLink="users/new">New</a>
+      </div>
+    </li>
 
-      <!--
-      <li ngbNavItem routerLinkActive="active">
-        <a ngbNavLink routerLink="/tournament-create">New Tournament</a>
-      </li>
-      -->
-
-    </ul>
+  </ul>
 </nav>
 
-<router-outlet />
+<router-outlet/>

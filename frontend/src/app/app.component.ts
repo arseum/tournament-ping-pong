@@ -3,7 +3,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {
   NgbDropdown,
   NgbDropdownItem,
-  NgbDropdownMenu,
+  NgbDropdownMenu, NgbDropdownToggle,
   NgbNav,
   NgbNavItem,
   NgbNavLink
@@ -14,7 +14,7 @@ import {
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive,
     NgbNavItem, NgbNavLink, NgbNav,
-    NgbDropdown, NgbDropdownMenu, NgbDropdownItem],
+    NgbDropdown, NgbDropdownMenu, NgbDropdownItem, NgbDropdownToggle],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
